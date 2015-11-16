@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65C45C861BFA9B5D0019E91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C45C851BFA9B5D0019E91A /* AppDelegate.swift */; };
+		65C45C881BFA9B5D0019E91A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C45C871BFA9B5D0019E91A /* ViewController.swift */; };
+		65C45C8B1BFA9B5D0019E91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C45C891BFA9B5D0019E91A /* Main.storyboard */; };
+		65C45C8E1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65C45C8C1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld */; };
+		65C45C901BFA9B5E0019E91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C45C8F1BFA9B5E0019E91A /* Assets.xcassets */; };
+		65C45C931BFA9B5E0019E91A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C45C911BFA9B5E0019E91A /* LaunchScreen.storyboard */; };
+		65C45C9E1BFA9B5E0019E91A /* ThreeWayFaceTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C45C9D1BFA9B5E0019E91A /* ThreeWayFaceTimeTests.swift */; };
+		65C45CA91BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C45CA81BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65C45C9A1BFA9B5E0019E91A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65C45C7A1BFA9B5D0019E91A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65C45C811BFA9B5D0019E91A;
+			remoteInfo = ThreeWayFaceTime;
+		};
+		65C45CA51BFA9B5E0019E91A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65C45C7A1BFA9B5D0019E91A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65C45C811BFA9B5D0019E91A;
+			remoteInfo = ThreeWayFaceTime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		65C45C821BFA9B5D0019E91A /* ThreeWayFaceTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeWayFaceTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C45C851BFA9B5D0019E91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65C45C871BFA9B5D0019E91A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65C45C8A1BFA9B5D0019E91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65C45C8D1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThreeWayFaceTime.xcdatamodel; sourceTree = "<group>"; };
+		65C45C8F1BFA9B5E0019E91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65C45C921BFA9B5E0019E91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65C45C941BFA9B5E0019E91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65C45C991BFA9B5E0019E91A /* ThreeWayFaceTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeWayFaceTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C45C9D1BFA9B5E0019E91A /* ThreeWayFaceTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeWayFaceTimeTests.swift; sourceTree = "<group>"; };
+		65C45C9F1BFA9B5E0019E91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65C45CA41BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeWayFaceTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C45CA81BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeWayFaceTimeUITests.swift; sourceTree = "<group>"; };
+		65C45CAA1BFA9B5E0019E91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65C45C7F1BFA9B5D0019E91A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C45C961BFA9B5E0019E91A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C45CA11BFA9B5E0019E91A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65C45C791BFA9B5D0019E91A = {
+			isa = PBXGroup;
+			children = (
+				65C45C841BFA9B5D0019E91A /* ThreeWayFaceTime */,
+				65C45C9C1BFA9B5E0019E91A /* ThreeWayFaceTimeTests */,
+				65C45CA71BFA9B5E0019E91A /* ThreeWayFaceTimeUITests */,
+				65C45C831BFA9B5D0019E91A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65C45C831BFA9B5D0019E91A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65C45C821BFA9B5D0019E91A /* ThreeWayFaceTime.app */,
+				65C45C991BFA9B5E0019E91A /* ThreeWayFaceTimeTests.xctest */,
+				65C45CA41BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65C45C841BFA9B5D0019E91A /* ThreeWayFaceTime */ = {
+			isa = PBXGroup;
+			children = (
+				65C45C851BFA9B5D0019E91A /* AppDelegate.swift */,
+				65C45C871BFA9B5D0019E91A /* ViewController.swift */,
+				65C45C891BFA9B5D0019E91A /* Main.storyboard */,
+				65C45C8F1BFA9B5E0019E91A /* Assets.xcassets */,
+				65C45C911BFA9B5E0019E91A /* LaunchScreen.storyboard */,
+				65C45C941BFA9B5E0019E91A /* Info.plist */,
+				65C45C8C1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld */,
+			);
+			path = ThreeWayFaceTime;
+			sourceTree = "<group>";
+		};
+		65C45C9C1BFA9B5E0019E91A /* ThreeWayFaceTimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				65C45C9D1BFA9B5E0019E91A /* ThreeWayFaceTimeTests.swift */,
+				65C45C9F1BFA9B5E0019E91A /* Info.plist */,
+			);
+			path = ThreeWayFaceTimeTests;
+			sourceTree = "<group>";
+		};
+		65C45CA71BFA9B5E0019E91A /* ThreeWayFaceTimeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				65C45CA81BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.swift */,
+				65C45CAA1BFA9B5E0019E91A /* Info.plist */,
+			);
+			path = ThreeWayFaceTimeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65C45C811BFA9B5D0019E91A /* ThreeWayFaceTime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C45CAD1BFA9B5E0019E91A /* Build configuration list for PBXNativeTarget "ThreeWayFaceTime" */;
+			buildPhases = (
+				65C45C7E1BFA9B5D0019E91A /* Sources */,
+				65C45C7F1BFA9B5D0019E91A /* Frameworks */,
+				65C45C801BFA9B5D0019E91A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThreeWayFaceTime;
+			productName = ThreeWayFaceTime;
+			productReference = 65C45C821BFA9B5D0019E91A /* ThreeWayFaceTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		65C45C981BFA9B5E0019E91A /* ThreeWayFaceTimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C45CB01BFA9B5E0019E91A /* Build configuration list for PBXNativeTarget "ThreeWayFaceTimeTests" */;
+			buildPhases = (
+				65C45C951BFA9B5E0019E91A /* Sources */,
+				65C45C961BFA9B5E0019E91A /* Frameworks */,
+				65C45C971BFA9B5E0019E91A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65C45C9B1BFA9B5E0019E91A /* PBXTargetDependency */,
+			);
+			name = ThreeWayFaceTimeTests;
+			productName = ThreeWayFaceTimeTests;
+			productReference = 65C45C991BFA9B5E0019E91A /* ThreeWayFaceTimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		65C45CA31BFA9B5E0019E91A /* ThreeWayFaceTimeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C45CB31BFA9B5E0019E91A /* Build configuration list for PBXNativeTarget "ThreeWayFaceTimeUITests" */;
+			buildPhases = (
+				65C45CA01BFA9B5E0019E91A /* Sources */,
+				65C45CA11BFA9B5E0019E91A /* Frameworks */,
+				65C45CA21BFA9B5E0019E91A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65C45CA61BFA9B5E0019E91A /* PBXTargetDependency */,
+			);
+			name = ThreeWayFaceTimeUITests;
+			productName = ThreeWayFaceTimeUITests;
+			productReference = 65C45CA41BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65C45C7A1BFA9B5D0019E91A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Hunter Maximillion Monk";
+				TargetAttributes = {
+					65C45C811BFA9B5D0019E91A = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					65C45C981BFA9B5E0019E91A = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 65C45C811BFA9B5D0019E91A;
+					};
+					65C45CA31BFA9B5E0019E91A = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 65C45C811BFA9B5D0019E91A;
+					};
+				};
+			};
+			buildConfigurationList = 65C45C7D1BFA9B5D0019E91A /* Build configuration list for PBXProject "ThreeWayFaceTime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65C45C791BFA9B5D0019E91A;
+			productRefGroup = 65C45C831BFA9B5D0019E91A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65C45C811BFA9B5D0019E91A /* ThreeWayFaceTime */,
+				65C45C981BFA9B5E0019E91A /* ThreeWayFaceTimeTests */,
+				65C45CA31BFA9B5E0019E91A /* ThreeWayFaceTimeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65C45C801BFA9B5D0019E91A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C45C931BFA9B5E0019E91A /* LaunchScreen.storyboard in Resources */,
+				65C45C901BFA9B5E0019E91A /* Assets.xcassets in Resources */,
+				65C45C8B1BFA9B5D0019E91A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C45C971BFA9B5E0019E91A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C45CA21BFA9B5E0019E91A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65C45C7E1BFA9B5D0019E91A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C45C881BFA9B5D0019E91A /* ViewController.swift in Sources */,
+				65C45C8E1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld in Sources */,
+				65C45C861BFA9B5D0019E91A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C45C951BFA9B5E0019E91A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C45C9E1BFA9B5E0019E91A /* ThreeWayFaceTimeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C45CA01BFA9B5E0019E91A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C45CA91BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65C45C9B1BFA9B5E0019E91A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65C45C811BFA9B5D0019E91A /* ThreeWayFaceTime */;
+			targetProxy = 65C45C9A1BFA9B5E0019E91A /* PBXContainerItemProxy */;
+		};
+		65C45CA61BFA9B5E0019E91A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65C45C811BFA9B5D0019E91A /* ThreeWayFaceTime */;
+			targetProxy = 65C45CA51BFA9B5E0019E91A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		65C45C891BFA9B5D0019E91A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65C45C8A1BFA9B5D0019E91A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		65C45C911BFA9B5E0019E91A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65C45C921BFA9B5E0019E91A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65C45CAB1BFA9B5E0019E91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65C45CAC1BFA9B5E0019E91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65C45CAE1BFA9B5E0019E91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ThreeWayFaceTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.ThreeWayFaceTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		65C45CAF1BFA9B5E0019E91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ThreeWayFaceTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.ThreeWayFaceTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		65C45CB11BFA9B5E0019E91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ThreeWayFaceTimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.ThreeWayFaceTimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThreeWayFaceTime.app/ThreeWayFaceTime";
+			};
+			name = Debug;
+		};
+		65C45CB21BFA9B5E0019E91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ThreeWayFaceTimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.ThreeWayFaceTimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThreeWayFaceTime.app/ThreeWayFaceTime";
+			};
+			name = Release;
+		};
+		65C45CB41BFA9B5E0019E91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ThreeWayFaceTimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.ThreeWayFaceTimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ThreeWayFaceTime;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		65C45CB51BFA9B5E0019E91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ThreeWayFaceTimeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.ThreeWayFaceTimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ThreeWayFaceTime;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65C45C7D1BFA9B5D0019E91A /* Build configuration list for PBXProject "ThreeWayFaceTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C45CAB1BFA9B5E0019E91A /* Debug */,
+				65C45CAC1BFA9B5E0019E91A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65C45CAD1BFA9B5E0019E91A /* Build configuration list for PBXNativeTarget "ThreeWayFaceTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C45CAE1BFA9B5E0019E91A /* Debug */,
+				65C45CAF1BFA9B5E0019E91A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		65C45CB01BFA9B5E0019E91A /* Build configuration list for PBXNativeTarget "ThreeWayFaceTimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C45CB11BFA9B5E0019E91A /* Debug */,
+				65C45CB21BFA9B5E0019E91A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		65C45CB31BFA9B5E0019E91A /* Build configuration list for PBXNativeTarget "ThreeWayFaceTimeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C45CB41BFA9B5E0019E91A /* Debug */,
+				65C45CB51BFA9B5E0019E91A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		65C45C8C1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				65C45C8D1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodel */,
+			);
+			currentVersion = 65C45C8D1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodel */;
+			path = ThreeWayFaceTime.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 65C45C7A1BFA9B5D0019E91A /* Project object */;
+}
