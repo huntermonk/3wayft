@@ -13,6 +13,18 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var userTitle:NSString?
+    
+    var callerTitle = NSString()
+    var sessionID = NSString()
+    var publisherToken = NSString()
+    var subscriberToken = NSString()
+    
+    var bFullyLoggedIn = Bool()
+    
+    var currentLocation = CLLocation()
+    var appTimer = NSTimer()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

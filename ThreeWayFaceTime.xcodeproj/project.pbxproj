@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6585C7CD1C38CE4300A32E55 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6585C7CC1C38CE4300A32E55 /* MainViewController.swift */; };
 		65A838E91BFA9DED005A876B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A838E81BFA9DED005A876B /* CoreMedia.framework */; };
 		65A838EB1BFA9DF2005A876B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A838EA1BFA9DF2005A876B /* CoreGraphics.framework */; };
 		65A838ED1BFA9DF8005A876B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A838EC1BFA9DF8005A876B /* Security.framework */; };
@@ -30,7 +31,6 @@
 		65A839111BFA9E92005A876B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A839101BFA9E92005A876B /* Foundation.framework */; };
 		65A839131BFA9E9B005A876B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A839121BFA9E9B005A876B /* UIKit.framework */; };
 		65C45C861BFA9B5D0019E91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C45C851BFA9B5D0019E91A /* AppDelegate.swift */; };
-		65C45C881BFA9B5D0019E91A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C45C871BFA9B5D0019E91A /* ViewController.swift */; };
 		65C45C8B1BFA9B5D0019E91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C45C891BFA9B5D0019E91A /* Main.storyboard */; };
 		65C45C8E1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65C45C8C1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld */; };
 		65C45C901BFA9B5E0019E91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C45C8F1BFA9B5E0019E91A /* Assets.xcassets */; };
@@ -60,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		2E98B168BF0F3B4C53A5B050 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6585C7CC1C38CE4300A32E55 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		65A838E81BFA9DED005A876B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		65A838EA1BFA9DF2005A876B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		65A838EC1BFA9DF8005A876B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -82,9 +83,9 @@
 		65A8390E1BFA9E8D005A876B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		65A839101BFA9E92005A876B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65A839121BFA9E9B005A876B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		65A8391C1BFAA2E8005A876B /* ThreeWayFaceTime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThreeWayFaceTime-Bridging-Header.h"; sourceTree = "<group>"; };
 		65C45C821BFA9B5D0019E91A /* ThreeWayFaceTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeWayFaceTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C45C851BFA9B5D0019E91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65C45C871BFA9B5D0019E91A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65C45C8A1BFA9B5D0019E91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65C45C8D1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThreeWayFaceTime.xcdatamodel; sourceTree = "<group>"; };
 		65C45C8F1BFA9B5E0019E91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,7 +97,7 @@
 		65C45CA41BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeWayFaceTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C45CA81BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeWayFaceTimeUITests.swift; sourceTree = "<group>"; };
 		65C45CAA1BFA9B5E0019E91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65C45CB61BFA9B740019E91A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		65C45CB61BFA9B740019E91A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ADB7A0CE9E98A2F384517FC3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C4275668711679C7FFC2D045 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -185,12 +186,13 @@
 			isa = PBXGroup;
 			children = (
 				65C45C851BFA9B5D0019E91A /* AppDelegate.swift */,
-				65C45C871BFA9B5D0019E91A /* ViewController.swift */,
+				6585C7CC1C38CE4300A32E55 /* MainViewController.swift */,
 				65C45C891BFA9B5D0019E91A /* Main.storyboard */,
 				65C45C8F1BFA9B5E0019E91A /* Assets.xcassets */,
 				65C45C911BFA9B5E0019E91A /* LaunchScreen.storyboard */,
 				65C45C941BFA9B5E0019E91A /* Info.plist */,
 				65C45C8C1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld */,
+				65A8391C1BFAA2E8005A876B /* ThreeWayFaceTime-Bridging-Header.h */,
 			);
 			path = ThreeWayFaceTime;
 			sourceTree = "<group>";
@@ -410,8 +412,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65C45C881BFA9B5D0019E91A /* ViewController.swift in Sources */,
 				65C45C8E1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld in Sources */,
+				6585C7CD1C38CE4300A32E55 /* MainViewController.swift in Sources */,
 				65C45C861BFA9B5D0019E91A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,11 +557,14 @@
 			baseConfigurationReference = 2E98B168BF0F3B4C53A5B050 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ThreeWayFaceTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.ThreeWayFaceTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ThreeWayFaceTime/ThreeWayFaceTime-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -568,11 +573,13 @@
 			baseConfigurationReference = ADB7A0CE9E98A2F384517FC3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ThreeWayFaceTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.ThreeWayFaceTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ThreeWayFaceTime/ThreeWayFaceTime-Bridging-Header.h";
 			};
 			name = Release;
 		};
