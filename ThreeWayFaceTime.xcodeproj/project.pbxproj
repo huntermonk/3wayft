@@ -159,6 +159,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		65044DC71C40D082008B8F14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6585C7CC1C38CE4300A32E55 /* MainViewController.swift */,
+				65044DC81C40D099008B8F14 /* Supporting Files */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65044DC81C40D099008B8F14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65C45C851BFA9B5D0019E91A /* AppDelegate.swift */,
+				65C45C891BFA9B5D0019E91A /* Main.storyboard */,
+				65C45C8F1BFA9B5E0019E91A /* Assets.xcassets */,
+				65C45C911BFA9B5E0019E91A /* LaunchScreen.storyboard */,
+				65C45C941BFA9B5E0019E91A /* Info.plist */,
+				65C45C8C1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld */,
+				65A8391C1BFAA2E8005A876B /* ThreeWayFaceTime-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		65C45C791BFA9B5D0019E91A = {
 			isa = PBXGroup;
 			children = (
@@ -185,14 +208,7 @@
 		65C45C841BFA9B5D0019E91A /* ThreeWayFaceTime */ = {
 			isa = PBXGroup;
 			children = (
-				65C45C851BFA9B5D0019E91A /* AppDelegate.swift */,
-				6585C7CC1C38CE4300A32E55 /* MainViewController.swift */,
-				65C45C891BFA9B5D0019E91A /* Main.storyboard */,
-				65C45C8F1BFA9B5E0019E91A /* Assets.xcassets */,
-				65C45C911BFA9B5E0019E91A /* LaunchScreen.storyboard */,
-				65C45C941BFA9B5E0019E91A /* Info.plist */,
-				65C45C8C1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld */,
-				65A8391C1BFAA2E8005A876B /* ThreeWayFaceTime-Bridging-Header.h */,
+				65044DC71C40D082008B8F14 /* Supporting Files */,
 			);
 			path = ThreeWayFaceTime;
 			sourceTree = "<group>";
