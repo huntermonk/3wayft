@@ -6,3 +6,6 @@ pod 'Crashlytics'
 
 pod 'Digits'
 pod 'TwitterCore'
+
+use_frameworks!
+pod 'Alamofire'

@@ -40,23 +40,6 @@ class secondStream: UIView {
         }
         
     }
-    /*
-    func doPublish(session:OTSession) {
-        print("2doPublish")
-        
-        let publisher = OTPublisher(delegate: self, name: UIDevice.currentDevice().name)
-        
-        var error:OTError? = nil
-        
-        session.publish(publisher, error: &error)
-        
-        if error != nil {
-            print(error?.localizedDescription)
-        }
-        
-        addSubview(publisher.view)
-        publisher.view.frame = CGRectMake(0, 0, 50, 50)
-    }*/
     
     func doSubscribe(session:OTSession, stream:OTStream) {
         print("2doSubscribe")
@@ -107,17 +90,3 @@ extension secondStream: OTSubscriberKitDelegate {
         
     }
 }
-/*
-extension secondStream: OTPublisherDelegate {
-    
-    func publisher(publisher: OTPublisherKit!, streamCreated stream: OTStream!) {
-        doSubscribe(publisher.session, stream: stream)
-        
-    }
-    
-    func publisher(publisher: OTPublisherKit!, didFailWithError error: OTError!) {
-        print(error.localizedDescription)
-    }
-    
-    
-}*/
