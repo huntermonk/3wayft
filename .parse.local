@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "3-Way FaceTime": {
+      "applicationId": "GP316TZUfjbbXH4MQhjWXRu58PTaKJDzpyLQ8dao"
+    },
+    "_default": {
+      "link": "3-Way FaceTime"
+    }
+  }
+}
