@@ -2,22 +2,30 @@ PODS:
   - Bolts/Tasks (1.5.0)
   - Crashlytics (3.5.0):
     - Fabric (~> 1.6.0)
+  - Digits (1.14.6):
+    - TwitterCore (= 1.14.6)
   - Fabric (1.6.2)
   - OpenTok (2.6.1)
   - Parse (1.9.1):
     - Bolts/Tasks (>= 1.4.0)
+  - TwitterCore (1.14.6):
+    - Fabric
 
 DEPENDENCIES:
   - Crashlytics
+  - Digits
   - Fabric
   - OpenTok
   - Parse
+  - TwitterCore
 
 SPEC CHECKSUMS:
   Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
   Crashlytics: fabfd45d0e8b8dc936c682b97e302b9a49a1c827
+  Digits: 57b958f1e19907b70645fcd25f97f14175ff2438
   Fabric: e8296d4a1abb3c5eed770cc86b311c862f51d340
   OpenTok: 6c094ee06dc954a4327c0a736f494f0eaf35c48c
   Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
+  TwitterCore: 5e9b2d066ceeef53fe611c0c4436cb700f1ed620
 
 COCOAPODS: 0.38.2
