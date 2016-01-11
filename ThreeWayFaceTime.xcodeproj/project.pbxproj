@@ -418,7 +418,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 3b0959a9fd1465c8f1a1e9f91397a34efb70a878 1016ba06ed81c2b4b67451435e1a1334bea679ad8c7608fc2958c36fcf4759fe";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 3b0959a9fd1465c8f1a1e9f91397a34efb70a878 1016ba06ed81c2b4b67451435e1a1334bea679ad8c7608fc2958c36fcf4759fe\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
 		6B2651A31A570605EFD26BD2 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
