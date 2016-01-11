@@ -1,14 +1,14 @@
 PODS:
   - Alamofire (3.1.4)
-  - Bolts/Tasks (1.5.0)
+  - Bolts/Tasks (1.5.1)
   - Crashlytics (3.5.0):
     - Fabric (~> 1.6.0)
   - Digits (1.14.6):
     - TwitterCore (= 1.14.6)
   - Fabric (1.6.2)
-  - OpenTok (2.6.1)
-  - Parse (1.9.1):
-    - Bolts/Tasks (>= 1.4.0)
+  - OpenTok (2.7.0)
+  - Parse (1.12.0):
+    - Bolts/Tasks (~> 1.5)
   - TwitterCore (1.14.6):
     - Fabric
 
@@ -23,12 +23,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
-  Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
+  Bolts: a12663244b1d3351c738882e71902fc74db54f64
   Crashlytics: fabfd45d0e8b8dc936c682b97e302b9a49a1c827
   Digits: 57b958f1e19907b70645fcd25f97f14175ff2438
   Fabric: e8296d4a1abb3c5eed770cc86b311c862f51d340
-  OpenTok: 6c094ee06dc954a4327c0a736f494f0eaf35c48c
-  Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
+  OpenTok: 56dbc82766bd925d7b19c4b4468534014eace65d
+  Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
   TwitterCore: 5e9b2d066ceeef53fe611c0c4436cb700f1ed620
 
 COCOAPODS: 0.38.2

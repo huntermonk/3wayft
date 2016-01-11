@@ -39,6 +39,7 @@
 		65C45C931BFA9B5E0019E91A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C45C911BFA9B5E0019E91A /* LaunchScreen.storyboard */; };
 		65C45C9E1BFA9B5E0019E91A /* ThreeWayFaceTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C45C9D1BFA9B5E0019E91A /* ThreeWayFaceTimeTests.swift */; };
 		65C45CA91BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C45CA81BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.swift */; };
+		65E7C81C1C437144003EE16C /* cloud in Resources */ = {isa = PBXBuildFile; fileRef = 65E7C81B1C437144003EE16C /* cloud */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		65C45CA41BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeWayFaceTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C45CA81BFA9B5E0019E91A /* ThreeWayFaceTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeWayFaceTimeUITests.swift; sourceTree = "<group>"; };
 		65C45CAA1BFA9B5E0019E91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E7C81B1C437144003EE16C /* cloud */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cloud; sourceTree = "<group>"; };
 		6A470041E5DEB3122E116BA4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB7A0CE9E98A2F384517FC3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +178,7 @@
 		65C45C791BFA9B5D0019E91A = {
 			isa = PBXGroup;
 			children = (
+				65E7C81B1C437144003EE16C /* cloud */,
 				65C45C841BFA9B5D0019E91A /* ThreeWayFaceTime */,
 				65C45C9C1BFA9B5E0019E91A /* ThreeWayFaceTimeTests */,
 				65C45CA71BFA9B5E0019E91A /* ThreeWayFaceTimeUITests */,
@@ -366,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E7C81C1C437144003EE16C /* cloud in Resources */,
 				65C45C931BFA9B5E0019E91A /* LaunchScreen.storyboard in Resources */,
 				65C45C901BFA9B5E0019E91A /* Assets.xcassets in Resources */,
 				65C45C8B1BFA9B5D0019E91A /* Main.storyboard in Resources */,
