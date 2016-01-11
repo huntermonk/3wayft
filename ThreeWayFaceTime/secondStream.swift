@@ -1,57 +1,51 @@
 //
-//  MainViewController.swift
+//  secondStream.swift
 //  ThreeWayFaceTime
 //
-//  Created by Hunter Maximillion Monk on 1/2/16.
+//  Created by Hunter Maximillion Monk on 1/8/16.
 //  Copyright © 2016 Hunter Maximillion Monk. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class MainViewController: UIViewController {
+class secondStream: UIView {
     
-    // Replace with your OpenTok API key
-    let key = "45454712"
-    // Replace with your generated session ID
-    let id = "2_MX40NTQ1NDcxMn5-MTQ1MjMxNjg3NjMyMH5XbDNObHNoRDRzUk9xbHRSRWNTaGRwaCt-UH4"
-    // Replace with your generated token
-    let token = "T1==cGFydG5lcl9pZD00NTQ1NDcxMiZzaWc9ODUzZjVkMzFlYjQ4M2JlMjZkYTQxMTI4NWJjMTMxMzhkMmQ1ODI2Mjpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTJfTVg0ME5UUTFORGN4TW41LU1UUTFNak14TmpnM05qTXlNSDVYYkROT2JITm9SRFJ6VWs5eGJIUlNSV05UYUdSd2FDdC1VSDQmY3JlYXRlX3RpbWU9MTQ1MjMxNjg5NCZub25jZT0wLjgyMDcxOTQ2NDQ5MTQ0OTUmZXhwaXJlX3RpbWU9MTQ1NDkwODg2MSZjb25uZWN0aW9uX2RhdGE9"
-    
-    let screenSize = UIScreen.mainScreen().bounds
+    let key = "45461132"
+    let id = "1_MX40NTQ2MTEzMn5-MTQ1MjMxODEyNTUzOH5hL0VnRkI1aytMYjBZV0EyTFFuNEpxM3R-UH4"
+    let token = "T1==cGFydG5lcl9pZD00NTQ2MTEzMiZzaWc9YTQ2NzM0OGNjMWI3NzY5MDBhMDQzMzVjYWYwMWRlMGM5ZjAxZmE0Mzpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTFfTVg0ME5UUTJNVEV6TW41LU1UUTFNak14T0RFeU5UVXpPSDVoTDBWblJrSTFheXRNWWpCWlYwRXlURkZ1TkVweE0zUi1VSDQmY3JlYXRlX3RpbWU9MTQ1MjMxODE1MSZub25jZT0wLjU5NTA1MzkwOTUzNzc0MDQmZXhwaXJlX3RpbWU9MTQ1NDkxMDEyMSZjb25uZWN0aW9uX2RhdGE9"
     
     var session:OTSession!
     var globalSubscriber:OTSubscriber!
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        session = OTSession(apiKey: key, sessionId: id, delegate: self)
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         session = OTSession(apiKey: key, sessionId: id, delegate: self)
         connectSession()
-        
-        let second = secondStream(frame: CGRectMake(0,400,screenSize.width,200))
-        second.backgroundColor = UIColor.redColor()
-        
-        view.addSubview(second)
-        
     }
     
     func connectSession() {
-        print("connectSession")
+        print("2connectSession")
         var error:OTError? = nil
         
         session.connectWithToken(token, error: &error)
+        
         
         if error != nil {
             print(error!.localizedDescription)
         }
         
     }
-    
+    /*
     func doPublish(session:OTSession) {
-        print("doPublish")
+        print("2doPublish")
         
         let publisher = OTPublisher(delegate: self, name: UIDevice.currentDevice().name)
-            
+        
         var error:OTError? = nil
         
         session.publish(publisher, error: &error)
@@ -60,70 +54,61 @@ class MainViewController: UIViewController {
             print(error?.localizedDescription)
         }
         
-        view.addSubview(publisher.view)
-        publisher.view.frame = CGRectMake(0, 0, 200, 200)
-    }
+        addSubview(publisher.view)
+        publisher.view.frame = CGRectMake(0, 0, 50, 50)
+    }*/
     
     func doSubscribe(session:OTSession, stream:OTStream) {
-        print("doSubscribe")
+        print("2doSubscribe")
         globalSubscriber = OTSubscriber(stream: stream, delegate: self)
         
         var error:OTError? = nil
-        
         session.subscribe(globalSubscriber, error: &error)
         
         if error != nil {
             print(error?.localizedDescription)
         }
-
+        
     }
-
+    
 }
 
-extension MainViewController: OTSessionDelegate {
+extension secondStream: OTSessionDelegate {
     
     func sessionDidConnect(session: OTSession!) {
-        print("sessionDidConnect")
-        doPublish(session)
-    }
-    
-    func session(session: OTSession!, streamCreated stream: OTStream!) {
-        doSubscribe(session, stream: stream)
-        print("streamCreated")
     }
     
     func sessionDidDisconnect(session: OTSession!) {
         
     }
     
+    func session(session: OTSession!, streamCreated stream: OTStream!) {
+        print("2StreamCreated")
+        doSubscribe(session, stream: stream)
+    }
+    
     func session(session: OTSession!, streamDestroyed stream: OTStream!) {
-        print("streamDestroyed")
     }
     
     func session(session: OTSession!, didFailWithError error: OTError!) {
-        print(error.localizedDescription)
     }
     
 }
 
-extension MainViewController: OTSubscriberKitDelegate {
-    
+extension secondStream: OTSubscriberKitDelegate {
     
     func subscriberDidConnectToStream(subscriber: OTSubscriberKit!) {
-        print("subscriberDidConnectToStream")
-        
-        globalSubscriber.view.frame = CGRectMake(0, 200, screenSize.width, 200)
-        view.addSubview(globalSubscriber.view)
-        
+        print("2subscriberDidConnectToStream")
+        globalSubscriber.view.frame = CGRectMake(50, 0, 100, 200)
+        addSubview(globalSubscriber.view)
     }
     
     func subscriber(subscriber: OTSubscriberKit!, didFailWithError error: OTError!) {
-        print(error.localizedDescription)
+        
     }
-    
 }
-
-extension MainViewController: OTPublisherDelegate {
+/*
+extension secondStream: OTPublisherDelegate {
     
     func publisher(publisher: OTPublisherKit!, streamCreated stream: OTStream!) {
         doSubscribe(publisher.session, stream: stream)
@@ -135,12 +120,4 @@ extension MainViewController: OTPublisherDelegate {
     }
     
     
-}
-
-
-
-
-
-
-
-
+}*/
