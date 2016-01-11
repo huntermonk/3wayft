@@ -15,7 +15,9 @@ class MainViewController: UIViewController {
     
     let id = "2_MX40NTQ1NDcxMn5-MTQ1MjMxNjg3NjMyMH5XbDNObHNoRDRzUk9xbHRSRWNTaGRwaCt-UH4"
     
-    let token = "T1==cGFydG5lcl9pZD00NTQ1NDcxMiZzaWc9ODUzZjVkMzFlYjQ4M2JlMjZkYTQxMTI4NWJjMTMxMzhkMmQ1ODI2Mjpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTJfTVg0ME5UUTFORGN4TW41LU1UUTFNak14TmpnM05qTXlNSDVYYkROT2JITm9SRFJ6VWs5eGJIUlNSV05UYUdSd2FDdC1VSDQmY3JlYXRlX3RpbWU9MTQ1MjMxNjg5NCZub25jZT0wLjgyMDcxOTQ2NDQ5MTQ0OTUmZXhwaXJlX3RpbWU9MTQ1NDkwODg2MSZjb25uZWN0aW9uX2RhdGE9"
+    var token:String?
+    
+    //let token = "T1==cGFydG5lcl9pZD00NTQ1NDcxMiZzaWc9ODUzZjVkMzFlYjQ4M2JlMjZkYTQxMTI4NWJjMTMxMzhkMmQ1ODI2Mjpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTJfTVg0ME5UUTFORGN4TW41LU1UUTFNak14TmpnM05qTXlNSDVYYkROT2JITm9SRFJ6VWs5eGJIUlNSV05UYUdSd2FDdC1VSDQmY3JlYXRlX3RpbWU9MTQ1MjMxNjg5NCZub25jZT0wLjgyMDcxOTQ2NDQ5MTQ0OTUmZXhwaXJlX3RpbWU9MTQ1NDkwODg2MSZjb25uZWN0aW9uX2RhdGE9"
     
     let screenSize = UIScreen.mainScreen().bounds
     
@@ -29,11 +31,11 @@ class MainViewController: UIViewController {
         //connectSession()
         
         createSession()
-        
+        /*
         let second = secondStream(frame: CGRectMake(0,400,screenSize.width,200))
         second.backgroundColor = UIColor.redColor()
         
-        view.addSubview(second)
+        view.addSubview(second)*/
         
     }
     
@@ -45,6 +47,7 @@ class MainViewController: UIViewController {
             if error != nil {
                 print("error \(error)")
             } else if let id = sessionID as? String {
+                self.session = OTSession(apiKey: self.key, sessionId: id, delegate: self)
                 self.generateToken(id)
             }
         }
@@ -58,7 +61,8 @@ class MainViewController: UIViewController {
             if error != nil {
                 print("error \(error)")
             } else if let id = result as? String {
-                print("result \(id)")
+                self.token = id
+                self.connectSession()
             }
         }
         
@@ -68,7 +72,9 @@ class MainViewController: UIViewController {
         print("connectSession")
         var error:OTError? = nil
         
-        session.connectWithToken(token, error: &error)
+        if token != nil {
+            session.connectWithToken(token, error: &error)
+        }
         
         if error != nil {
             print(error!.localizedDescription)
