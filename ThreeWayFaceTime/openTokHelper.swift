@@ -16,16 +16,27 @@ protocol openTokHelperDelegate {
     func displaySubscriberView(subscriber:OTSubscriber)
 }
 
+/*
+
+public typealias LoginCompletionBlock = ((PFUser?, NSError?) -> Void)
+public typealias LinkCompletionBlock = ((Bool, NSError?) -> Void)
+
+
+//___ This is how you make variables that always equal that lol
+private struct Constants {
+static let sessionKey = "session"
+static let requestURLStringKey = "requestURLString"
+static let authorizationHeaderKey = "authorizationHeader"
+}
+
+*/
+
 
 public class openTokHelper : NSObject {
     
     let key = "45454712"
     
     var delegate:openTokHelperDelegate?
-    
-    var id:String?
-    
-    var token:String?
     
     var session:OTSession!
     var globalSubscriber:OTSubscriber!
@@ -34,12 +45,14 @@ public class openTokHelper : NSObject {
     
     override public init() {
         super.init()
-        if let cacheSession = PFUser.currentUser()?["session"] as? String {
-            session = OTSession(apiKey: key, sessionId: cacheSession, delegate: self)
-            generateToken(cacheSession)
+        if let cachedSession = PFUser.currentUser()?["session"] as? String {
+            session = OTSession(apiKey: key, sessionId: cachedSession, delegate: self)
+            generateToken(cachedSession)
         } else {
             createSession()
         }
+        
+        PFUser.becomeInBackground("test")
     }
     
     private func createSession() {
@@ -64,8 +77,7 @@ public class openTokHelper : NSObject {
             if error != nil {
                 print("error \(error)")
             } else if let id = result as? String {
-                self.token = id
-                self.connectSession()
+                self.connectSession(id)
                 self.updateUserSession(sessionId)
             }
         }
@@ -80,14 +92,12 @@ public class openTokHelper : NSObject {
         
     }
     
-    private func connectSession() {
+    private func connectSession(token:String) {
         
         print("connectSession")
         var error:OTError? = nil
         
-        if token != nil {
-            session.connectWithToken(token, error: &error)
-        }
+        session.connectWithToken(token, error: &error)
         
         if error != nil {
             print(error!.localizedDescription)
