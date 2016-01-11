@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import Parse
 
 class MainViewController: UIViewController {
     
-    // Replace with your OpenTok API key
     let key = "45454712"
-    // Replace with your generated session ID
+    
     let id = "2_MX40NTQ1NDcxMn5-MTQ1MjMxNjg3NjMyMH5XbDNObHNoRDRzUk9xbHRSRWNTaGRwaCt-UH4"
-    // Replace with your generated token
+    
     let token = "T1==cGFydG5lcl9pZD00NTQ1NDcxMiZzaWc9ODUzZjVkMzFlYjQ4M2JlMjZkYTQxMTI4NWJjMTMxMzhkMmQ1ODI2Mjpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTJfTVg0ME5UUTFORGN4TW41LU1UUTFNak14TmpnM05qTXlNSDVYYkROT2JITm9SRFJ6VWs5eGJIUlNSV05UYUdSd2FDdC1VSDQmY3JlYXRlX3RpbWU9MTQ1MjMxNjg5NCZub25jZT0wLjgyMDcxOTQ2NDQ5MTQ0OTUmZXhwaXJlX3RpbWU9MTQ1NDkwODg2MSZjb25uZWN0aW9uX2RhdGE9"
     
     let screenSize = UIScreen.mainScreen().bounds
@@ -25,13 +25,42 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        session = OTSession(apiKey: key, sessionId: id, delegate: self)
-        connectSession()
+        //session = OTSession(apiKey: key, sessionId: id, delegate: self)
+        //connectSession()
+        
+        createSession()
         
         let second = secondStream(frame: CGRectMake(0,400,screenSize.width,200))
         second.backgroundColor = UIColor.redColor()
         
         view.addSubview(second)
+        
+    }
+    
+    func createSession() {
+        print("createSession()")
+        
+        PFCloud.callFunctionInBackground("opentokNewSession", withParameters: nil) {
+            (sessionID, error) -> Void in
+            if error != nil {
+                print("error \(error)")
+            } else if let id = sessionID as? String {
+                self.generateToken(id)
+            }
+        }
+        
+    }
+    
+    
+    func generateToken(sessionId:String) {
+        
+        PFCloud.callFunctionInBackground("opentokGenerateToken", withParameters: ["sessionId":"\(sessionId)"]) { (result, error) -> Void in
+            if error != nil {
+                print("error \(error)")
+            } else if let id = result as? String {
+                print("result \(id)")
+            }
+        }
         
     }
     

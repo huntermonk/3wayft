@@ -11,6 +11,7 @@ import CoreData
 import Fabric
 import Crashlytics
 import DigitsKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        Parse.setApplicationId("GP316TZUfjbbXH4MQhjWXRu58PTaKJDzpyLQ8dao", clientKey: "oxtm6OvMrpZ5W788UZObVJIsEvsAAmVdv0lDOvN4")
+        
         Fabric.with([Crashlytics.self,Digits.self])
         return true
     }

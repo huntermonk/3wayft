@@ -6,7 +6,7 @@ Parse.Cloud.define("hello", function(request, response) {
 });
 
 
-var opentok = require('cloud/opentok/opentok.js').createOpenTokSDK('OPENTOK_API_KEY', 'OPENTOK_API_SECRET');
+var opentok = require('cloud/opentok/opentok.js').createOpenTokSDK('45454712', '3b1897f750d50fb5383f98cefea181d93783cb69');
 
 // Example function that creates a session
 Parse.Cloud.define("opentokNewSession", function(request, response) {
