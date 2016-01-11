@@ -164,16 +164,6 @@
 		65044DC71C40D082008B8F14 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6585C7CC1C38CE4300A32E55 /* MainViewController.swift */,
-				65044DC91C40D7B5008B8F14 /* secondStream.swift */,
-				65044DC81C40D099008B8F14 /* Supporting Files */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		65044DC81C40D099008B8F14 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				65C45C851BFA9B5D0019E91A /* AppDelegate.swift */,
 				65C45C891BFA9B5D0019E91A /* Main.storyboard */,
 				65C45C8F1BFA9B5E0019E91A /* Assets.xcassets */,
@@ -211,6 +201,8 @@
 		65C45C841BFA9B5D0019E91A /* ThreeWayFaceTime */ = {
 			isa = PBXGroup;
 			children = (
+				6585C7CC1C38CE4300A32E55 /* MainViewController.swift */,
+				65044DC91C40D7B5008B8F14 /* secondStream.swift */,
 				65044DC71C40D082008B8F14 /* Supporting Files */,
 			);
 			path = ThreeWayFaceTime;
@@ -276,6 +268,7 @@
 				65C45C7F1BFA9B5D0019E91A /* Frameworks */,
 				65C45C801BFA9B5D0019E91A /* Resources */,
 				6B2651A31A570605EFD26BD2 /* Copy Pods Resources */,
+				65E7C81A1C4364E9003EE16C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -413,6 +406,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		65E7C81A1C4364E9003EE16C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 3b0959a9fd1465c8f1a1e9f91397a34efb70a878 1016ba06ed81c2b4b67451435e1a1334bea679ad8c7608fc2958c36fcf4759fe";
 		};
 		6B2651A31A570605EFD26BD2 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
