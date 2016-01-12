@@ -31,7 +31,6 @@
 		65A8390F1BFA9E8D005A876B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A8390E1BFA9E8D005A876B /* CoreVideo.framework */; };
 		65A839111BFA9E92005A876B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A839101BFA9E92005A876B /* Foundation.framework */; };
 		65A839131BFA9E9B005A876B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A839121BFA9E9B005A876B /* UIKit.framework */; };
-		65AEA56E1C438FA100859DBF /* openTokHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AEA56D1C438FA100859DBF /* openTokHelper.swift */; };
 		65C45C861BFA9B5D0019E91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C45C851BFA9B5D0019E91A /* AppDelegate.swift */; };
 		65C45C8B1BFA9B5D0019E91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C45C891BFA9B5D0019E91A /* Main.storyboard */; };
 		65C45C8E1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65C45C8C1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld */; };
@@ -87,7 +86,6 @@
 		65A839101BFA9E92005A876B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65A839121BFA9E9B005A876B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65A8391C1BFAA2E8005A876B /* ThreeWayFaceTime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThreeWayFaceTime-Bridging-Header.h"; sourceTree = "<group>"; };
-		65AEA56D1C438FA100859DBF /* openTokHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = openTokHelper.swift; sourceTree = "<group>"; };
 		65C45C821BFA9B5D0019E91A /* ThreeWayFaceTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeWayFaceTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C45C851BFA9B5D0019E91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C45C8A1BFA9B5D0019E91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 			children = (
 				65C45C851BFA9B5D0019E91A /* AppDelegate.swift */,
 				6585C7CC1C38CE4300A32E55 /* MainViewController.swift */,
-				65AEA56D1C438FA100859DBF /* openTokHelper.swift */,
 				65044DC91C40D7B5008B8F14 /* secondStream.swift */,
 				65044DC71C40D082008B8F14 /* Supporting Files */,
 			);
@@ -465,7 +462,6 @@
 				65044DCA1C40D7B5008B8F14 /* secondStream.swift in Sources */,
 				6585C7CD1C38CE4300A32E55 /* MainViewController.swift in Sources */,
 				65C45C861BFA9B5D0019E91A /* AppDelegate.swift in Sources */,
-				65AEA56E1C438FA100859DBF /* openTokHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
