@@ -41,20 +41,6 @@ class CoreData {
         
     }
     
-    func fetchWithLocationID(locID:String) -> [NSManagedObject] {
-        
-        let fetchRequest = NSFetchRequest(entityName:"ViewedLocation")
-        let predicate = NSPredicate(format: "locationID == %@", locID)
-        fetchRequest.predicate = predicate
-        
-        if let fetchedResults = (try? managedContext.executeFetchRequest(fetchRequest)) as? [NSManagedObject] {
-            return fetchedResults
-        } else {
-            return []
-        }
-        
-    }
-    
     func fetchContacts() -> [NSManagedObject] {
         
         let fetchRequest = NSFetchRequest(entityName:"Contact")
@@ -73,6 +59,22 @@ class CoreData {
             print("Could not fetch \(error.localizedDescription)")
             return []
         }
+    }
+    
+    func saveAllContacts() {
+        let store = CNContactStore()
+        
+        do {
+            let request = CNContactFetchRequest(keysToFetch: [CNContactPhoneNumbersKey,CNContactGivenNameKey,CNContactFamilyNameKey])
+            try store.enumerateContactsWithFetchRequest(request, usingBlock: {
+                (contact, error) -> Void in
+                CoreData.sharedInstance.addContact(contact)
+            })
+            
+        } catch let error as NSError {
+            print("error \(error)")
+        }
+        
     }
     
     func fetchFTContacts() -> [FTContact] {
