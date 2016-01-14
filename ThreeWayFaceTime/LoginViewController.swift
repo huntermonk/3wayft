@@ -19,7 +19,6 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         addDigitsButton()
     }
     
@@ -48,7 +47,6 @@ class LoginViewController: UIViewController {
             if error != nil {
                 UIAlertController().displayMessage(error!.localizedDescription)
             } else {
-                print("PFUSer \(user)")
                 self.uploadContacts()
             }
         })
@@ -65,41 +63,25 @@ class LoginViewController: UIViewController {
         
     }
     
-    func uploadAllContacts() {
-        let store = CNContactStore()
-        
-        var i = 0
-        do {
-            let request = CNContactFetchRequest(keysToFetch: [CNContactPhoneNumbersKey,CNContactGivenNameKey,CNContactFamilyNameKey])
-            try store.enumerateContactsWithFetchRequest(request, usingBlock: {
-                (contact, error) -> Void in
-                ++i
-                CoreData.sharedInstance.addContact(contact)
-            })
-            
-        } catch {
-            print("error")
-        }
-        
-    }
+    // TODO: - Get all this logic out to the model
 
-    // TODO: - Figure out why I'm always getting Error Domain=DigitsErrorDomain Code=8
     func uploadContacts() {
         let userSession = Digits.sharedInstance().session()
         let contacts = DGTContacts(userSession: userSession)
         
         contacts.startContactsUploadWithCompletion {
             result, error in
-            // Inspect results and error objects to determine if upload succeeded.
             
             if error != nil {
                 print("error \(error)")
-                UIAlertController().displayMessage(error!.localizedDescription)
+                if error.code != 8 {
+                    UIAlertController().displayMessage(error!.localizedDescription)
+                } else {
+                    self.dismiss()
+                }
+            } else {
+                self.dismiss()
             }
-            
-            self.dismiss()
-            self.uploadAllContacts()
-            
         }
     }
     

@@ -49,7 +49,6 @@ public class OpenTokHelper : NSObject {
             createSession()
         }
         
-        PFUser.becomeInBackground("test")
     }
     
     private func createSession() {
