@@ -30,44 +30,28 @@ class LoginViewController: UIViewController {
             // Inspect session/error objects
             if error != nil {
                 print("error \(error)")
+                UIAlertController().displayMessage(error!.localizedDescription)
             } else {
-                self.loginParse(session)
+                self.loginParse()
             }
             
         })
-        
+                
         digitsButton.center = view.center
         self.view.addSubview(digitsButton)
         
     }
     
-    
-    // TODO: - This is stupid
-    func loginParse(digitsSession:DGTSession) {
+    func loginParse() {
         
-        let user = PFUser()
-        user.username = digitsSession.phoneNumber
-        user.password = digitsSession.userID
-        
-        user.signUpInBackgroundWithBlock { (success, error) -> Void in
+        PFUser.loginWithDigitsInBackground({ (user, error) -> Void in
             if error != nil {
-                
-                if error!.code == 202 {
-                    PFUser.logInWithUsernameInBackground(digitsSession.phoneNumber, password: digitsSession.userID, block: {
-                        (user, error) -> Void in
-                        if error != nil {
-                            UIAlertController().displayMessage(error!.localizedDescription)
-                        } else {
-                            self.dismiss()
-                        }
-                    })
-                } else {
-                    UIAlertController().displayMessage(error!.localizedDescription)
-                }
+                UIAlertController().displayMessage(error!.localizedDescription)
             } else {
-                self.dismiss()
+                print("PFUSer \(user)")
+                self.uploadContacts()
             }
-        }
+        })
         
     }
     
@@ -97,10 +81,9 @@ class LoginViewController: UIViewController {
             print("error")
         }
         
-        print("contacts count \(i)")
     }
 
-    
+    // TODO: - Figure out why I'm always getting Error Domain=DigitsErrorDomain Code=8
     func uploadContacts() {
         let userSession = Digits.sharedInstance().session()
         let contacts = DGTContacts(userSession: userSession)
@@ -108,6 +91,14 @@ class LoginViewController: UIViewController {
         contacts.startContactsUploadWithCompletion {
             result, error in
             // Inspect results and error objects to determine if upload succeeded.
+            
+            if error != nil {
+                print("error \(error)")
+                UIAlertController().displayMessage(error!.localizedDescription)
+            }
+            
+            self.dismiss()
+            self.uploadAllContacts()
             
         }
     }

@@ -14,10 +14,27 @@
                         <viewControllerLayoutGuide type="bottom" id="3kh-hI-3q8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JYt-Ca-rbt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPt-Te-od8">
+                                <rect key="frame" x="20" y="56" width="280" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="h75-dy-vgE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" red="0.19050638089005234" green="0.19050638089005234" blue="0.19050638089005234" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DPt-Te-od8" firstAttribute="top" secondItem="V29-Ox-Z5F" secondAttribute="bottom" constant="36" id="AbK-OV-QSg"/>
+                            <constraint firstAttribute="trailing" secondItem="DPt-Te-od8" secondAttribute="trailing" constant="20" id="IA1-eZ-Etw"/>
+                            <constraint firstItem="DPt-Te-od8" firstAttribute="leading" secondItem="JYt-Ca-rbt" secondAttribute="leading" constant="20" id="VMe-zr-kVi"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gmq-X5-gFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
