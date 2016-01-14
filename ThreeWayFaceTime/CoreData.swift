@@ -55,17 +55,16 @@ class CoreData {
         
     }
     
-    func fetchAllContacts() -> [NSManagedObject] {
+    func fetchContacts() -> [NSManagedObject] {
         
         let fetchRequest = NSFetchRequest(entityName:"Contact")
-        fetchRequest.returnsObjectsAsFaults = false
         
         let sortDescriptor = NSSortDescriptor(key: "givenName", ascending: true)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
                 
         do {
-            if let fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as?[NSManagedObject] {
+            if let fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject] {
                 return fetchedResults
             } else {
                 return []
@@ -76,27 +75,24 @@ class CoreData {
         }
     }
     
-    func fetchAllContacts() -> [FTContact] {
+    func fetchFTContacts() -> [FTContact] {
         
-        let array = fetchAllContacts() as [NSManagedObject]
+        let array = fetchContacts()
         
         var returnArray = [FTContact]()
         
         for item in array {
             
-            guard let givenName = item.valueForKey("givenName") as? String else {
-                break
-            }
-            
-            guard let familyName = item.valueForKey("familyName") as? String else {
-                break
-            }
+            let givenName = item.valueForKey("givenName") as? String
+            let familyName = item.valueForKey("familyName") as? String
             
             guard let phoneNumber = item.valueForKey("phoneNumber") as? String else {
-                break
+                continue
             }
             
             let user = FTContact(givenName: givenName, familyName: familyName, phoneNumber: phoneNumber)
+            
+            if returnArray.contains(user) { continue }
             
             returnArray.append(user)
             
