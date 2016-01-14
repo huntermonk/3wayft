@@ -41,6 +41,8 @@ class LoginViewController: UIViewController {
         
     }
     
+    
+    // TODO: - This is stupid
     func loginParse(digitsSession:DGTSession) {
         
         let user = PFUser()
@@ -49,7 +51,6 @@ class LoginViewController: UIViewController {
         
         user.signUpInBackgroundWithBlock { (success, error) -> Void in
             if error != nil {
-                print("signupError \(error)")
                 
                 if error!.code == 202 {
                     PFUser.logInWithUsernameInBackground(digitsSession.phoneNumber, password: digitsSession.userID, block: {
@@ -60,6 +61,8 @@ class LoginViewController: UIViewController {
                             self.dismiss()
                         }
                     })
+                } else {
+                    UIAlertController().displayMessage(error!.localizedDescription)
                 }
             } else {
                 self.dismiss()
@@ -70,7 +73,11 @@ class LoginViewController: UIViewController {
     
     func dismiss() {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
+            presentViewController(controller, animated: true) { () -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
         
     }
     
