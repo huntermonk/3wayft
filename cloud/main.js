@@ -5,6 +5,7 @@ Parse.Cloud.define("hello", function(request, response) {
   response.success("Hello world!");
 });
 
+require('cloud/user.js');
 
 var opentok = require('cloud/opentok/opentok.js').createOpenTokSDK('45454712', '3b1897f750d50fb5383f98cefea181d93783cb69');
 
