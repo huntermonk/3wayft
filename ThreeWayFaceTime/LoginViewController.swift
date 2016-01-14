@@ -9,6 +9,7 @@
 import UIKit
 import DigitsKit
 import Parse
+import Contacts
 
 class LoginViewController: UIViewController {
 
@@ -39,17 +40,80 @@ class LoginViewController: UIViewController {
     
     func loginParse(digitsSession:DGTSession) {
         
-        PFUser.becomeInBackground(digitsSession.authToken) {
-            (user, error) -> Void in
+        let user = PFUser()
+        user.username = digitsSession.phoneNumber
+        user.password = digitsSession.userID
+        
+        user.signUpInBackgroundWithBlock { (success, error) -> Void in
             if error != nil {
-                print(error)
+                print("signupError \(error)")
+                
+                if error!.code == 202 {
+                    PFUser.logInWithUsernameInBackground(digitsSession.phoneNumber, password: digitsSession.userID, block: { (user, error) -> Void in
+                        //self.uploadContacts()
+                        self.searchContacts()
+                    })
+                }
+                //self.uploadContacts()
             } else {
-                self.presentViewController(MainViewController.instantiateFromStoryboard(), animated: true, completion: { () -> Void in
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                })
+                print("sexcess")
             }
         }
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        let store = CNContactStore()
+        
+        var i = 0
+        do {
+            let request = CNContactFetchRequest(keysToFetch: [CNContactPhoneNumbersKey,CNContactGivenNameKey,CNContactFamilyNameKey])
+            try store.enumerateContactsWithFetchRequest(request, usingBlock: {
+                (contact, error) -> Void in
+                //print("error\(error)")
+                ++i
+                if let digits = contact.phoneNumbers.first?.value as? CNPhoneNumber {
+                    print("\(contact.givenName) \(contact.familyName)'s phone number is \(digits.stringValue)")
+                }
+                
+            })
+        } catch {
+            print("error")
+        }
+        
+        print("contacts count \(i)")
+        
+        
+    }
+    
+    func uploadContacts() {
+        let userSession = Digits.sharedInstance().session()
+        print(userSession)
+        let contacts = DGTContacts(userSession: userSession)
+        
+        contacts.startContactsUploadWithCompletion {
+            result, error in
+            // Inspect results and error objects to determine if upload succeeded.
+            print("error\(error)")
+            print("result contacts\(result.totalContacts)")
+            print("result contacts successful\(result.numberOfUploadedContacts)")
+            
+        }
+    }
+    
+    func searchContacts() {
+        // Swift
+        let userSession = Digits.sharedInstance().session()
+        let contacts = DGTContacts(userSession: userSession)
+        
+        /*
+        contacts.lookupContactMatchesWithCursor(nil) { matches, nextCursor, error in
+            // matches is an Array of DGTUser objects.
+            // Use nextCursor in a follow-up call to this method to offset the results.
+            print(matches)
+            print(error)
+        }*/
     }
 
 }
