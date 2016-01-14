@@ -13,7 +13,14 @@
 		6516C1881C472F9F003B35E0 /* FT+NSUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6516C1871C472F9F003B35E0 /* FT+NSUserDefaults.swift */; };
 		6516C18A1C472FB9003B35E0 /* FT+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6516C1891C472FB9003B35E0 /* FT+UIAlertController.swift */; };
 		6516C18D1C473222003B35E0 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6516C18C1C473222003B35E0 /* CoreData.swift */; };
-		6585C7CD1C38CE4300A32E55 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6585C7CC1C38CE4300A32E55 /* MainViewController.swift */; };
+		6516C1911C476305003B35E0 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6516C1901C476305003B35E0 /* ContactTableViewController.swift */; };
+		6516C1961C476357003B35E0 /* FTContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6516C1951C476357003B35E0 /* FTContact.swift */; };
+		65260A171C477AC100656FFB /* ContactDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65260A161C477AC100656FFB /* ContactDetail.storyboard */; };
+		65260A1A1C477BC300656FFB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65260A191C477BC300656FFB /* Login.storyboard */; };
+		65260A1D1C477F4B00656FFB /* ContactDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A1C1C477F4B00656FFB /* ContactDetailTableViewController.swift */; };
+		65260A5D1C482EB300656FFB /* PFUser+Digits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A5C1C482EB300656FFB /* PFUser+Digits.swift */; };
+		65260A621C483A0300656FFB /* Call.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65260A611C483A0300656FFB /* Call.storyboard */; };
+		65260A641C483A1C00656FFB /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A631C483A1C00656FFB /* CallViewController.swift */; };
 		65961AB81C448F3000BD9212 /* OpenTokHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65961AB71C448F3000BD9212 /* OpenTokHelper.swift */; };
 		65961ABA1C448FEC00BD9212 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65961AB91C448FEC00BD9212 /* LoginViewController.swift */; };
 		65A838E91BFA9DED005A876B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A838E81BFA9DED005A876B /* CoreMedia.framework */; };
@@ -74,7 +81,14 @@
 		6516C1871C472F9F003B35E0 /* FT+NSUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FT+NSUserDefaults.swift"; sourceTree = "<group>"; };
 		6516C1891C472FB9003B35E0 /* FT+UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FT+UIAlertController.swift"; sourceTree = "<group>"; };
 		6516C18C1C473222003B35E0 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
-		6585C7CC1C38CE4300A32E55 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6516C1901C476305003B35E0 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
+		6516C1951C476357003B35E0 /* FTContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTContact.swift; sourceTree = "<group>"; };
+		65260A161C477AC100656FFB /* ContactDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContactDetail.storyboard; sourceTree = "<group>"; };
+		65260A191C477BC300656FFB /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		65260A1C1C477F4B00656FFB /* ContactDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailTableViewController.swift; sourceTree = "<group>"; };
+		65260A5C1C482EB300656FFB /* PFUser+Digits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PFUser+Digits.swift"; sourceTree = "<group>"; };
+		65260A611C483A0300656FFB /* Call.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Call.storyboard; sourceTree = "<group>"; };
+		65260A631C483A1C00656FFB /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		65961AB71C448F3000BD9212 /* OpenTokHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTokHelper.swift; sourceTree = "<group>"; };
 		65961AB91C448FEC00BD9212 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		65A838E81BFA9DED005A876B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -180,7 +194,6 @@
 		65044DC71C40D082008B8F14 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				65C45C891BFA9B5D0019E91A /* Main.storyboard */,
 				65C45C8F1BFA9B5E0019E91A /* Assets.xcassets */,
 				65C45C911BFA9B5E0019E91A /* LaunchScreen.storyboard */,
 				65C45C941BFA9B5E0019E91A /* Info.plist */,
@@ -193,10 +206,56 @@
 		6516C18B1C47304A003B35E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				65260A5C1C482EB300656FFB /* PFUser+Digits.swift */,
 				6516C1871C472F9F003B35E0 /* FT+NSUserDefaults.swift */,
 				6516C1891C472FB9003B35E0 /* FT+UIAlertController.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		6516C1941C476314003B35E0 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				6516C1901C476305003B35E0 /* ContactTableViewController.swift */,
+				65260A1C1C477F4B00656FFB /* ContactDetailTableViewController.swift */,
+				65260A161C477AC100656FFB /* ContactDetail.storyboard */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		65260A181C477ACE00656FFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6516C1951C476357003B35E0 /* FTContact.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		65260A1B1C477BC800656FFB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				65961AB91C448FEC00BD9212 /* LoginViewController.swift */,
+				65260A191C477BC300656FFB /* Login.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		65260A5E1C48386400656FFB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6516C18C1C473222003B35E0 /* CoreData.swift */,
+				65961AB71C448F3000BD9212 /* OpenTokHelper.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		65260A651C483A6B00656FFB /* Caller */ = {
+			isa = PBXGroup;
+			children = (
+				65260A611C483A0300656FFB /* Call.storyboard */,
+				65260A631C483A1C00656FFB /* CallViewController.swift */,
+			);
+			name = Caller;
 			sourceTree = "<group>";
 		};
 		65C45C791BFA9B5D0019E91A = {
@@ -226,11 +285,13 @@
 			isa = PBXGroup;
 			children = (
 				65C45C851BFA9B5D0019E91A /* AppDelegate.swift */,
-				65961AB91C448FEC00BD9212 /* LoginViewController.swift */,
+				65260A5E1C48386400656FFB /* Helper */,
+				65260A1B1C477BC800656FFB /* Login */,
+				65260A181C477ACE00656FFB /* Model */,
 				6516C18B1C47304A003B35E0 /* Extensions */,
-				6585C7CC1C38CE4300A32E55 /* MainViewController.swift */,
-				6516C18C1C473222003B35E0 /* CoreData.swift */,
-				65961AB71C448F3000BD9212 /* OpenTokHelper.swift */,
+				65260A651C483A6B00656FFB /* Caller */,
+				65C45C891BFA9B5D0019E91A /* Main.storyboard */,
+				6516C1941C476314003B35E0 /* Contacts */,
 				65044DC91C40D7B5008B8F14 /* secondStream.swift */,
 				65044DC71C40D082008B8F14 /* Supporting Files */,
 			);
@@ -401,6 +462,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E7C81C1C437144003EE16C /* cloud in Resources */,
+				65260A171C477AC100656FFB /* ContactDetail.storyboard in Resources */,
+				65260A1A1C477BC300656FFB /* Login.storyboard in Resources */,
+				65260A621C483A0300656FFB /* Call.storyboard in Resources */,
 				65C45C931BFA9B5E0019E91A /* LaunchScreen.storyboard in Resources */,
 				65C45C901BFA9B5E0019E91A /* Assets.xcassets in Resources */,
 				65C45C8B1BFA9B5D0019E91A /* Main.storyboard in Resources */,
@@ -490,12 +554,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				65961ABA1C448FEC00BD9212 /* LoginViewController.swift in Sources */,
+				65260A5D1C482EB300656FFB /* PFUser+Digits.swift in Sources */,
 				65C45C8E1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld in Sources */,
 				65044DCA1C40D7B5008B8F14 /* secondStream.swift in Sources */,
-				6585C7CD1C38CE4300A32E55 /* MainViewController.swift in Sources */,
+				65260A1D1C477F4B00656FFB /* ContactDetailTableViewController.swift in Sources */,
+				65260A641C483A1C00656FFB /* CallViewController.swift in Sources */,
 				6516C18D1C473222003B35E0 /* CoreData.swift in Sources */,
 				6516C18A1C472FB9003B35E0 /* FT+UIAlertController.swift in Sources */,
 				65961AB81C448F3000BD9212 /* OpenTokHelper.swift in Sources */,
+				6516C1961C476357003B35E0 /* FTContact.swift in Sources */,
+				6516C1911C476305003B35E0 /* ContactTableViewController.swift in Sources */,
 				65C45C861BFA9B5D0019E91A /* AppDelegate.swift in Sources */,
 				6516C1881C472F9F003B35E0 /* FT+NSUserDefaults.swift in Sources */,
 			);
