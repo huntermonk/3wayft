@@ -76,5 +76,36 @@ class CoreData {
         }
     }
     
+    func fetchAllContacts() -> [FTContact] {
+        
+        let array = fetchAllContacts() as [NSManagedObject]
+        
+        var returnArray = [FTContact]()
+        
+        for item in array {
+            
+            guard let givenName = item.valueForKey("givenName") as? String else {
+                break
+            }
+            
+            guard let familyName = item.valueForKey("familyName") as? String else {
+                break
+            }
+            
+            guard let phoneNumber = item.valueForKey("phoneNumber") as? String else {
+                break
+            }
+            
+            let user = FTContact(givenName: givenName, familyName: familyName, phoneNumber: phoneNumber)
+            
+            returnArray.append(user)
+            
+        }
+        
+        return returnArray
+        
+        
+    }
+    
     
 }
