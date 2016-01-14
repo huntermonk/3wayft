@@ -62,8 +62,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
-        
+    func uploadAllContacts() {
         let store = CNContactStore()
         
         var i = 0
@@ -71,20 +70,19 @@ class LoginViewController: UIViewController {
             let request = CNContactFetchRequest(keysToFetch: [CNContactPhoneNumbersKey,CNContactGivenNameKey,CNContactFamilyNameKey])
             try store.enumerateContactsWithFetchRequest(request, usingBlock: {
                 (contact, error) -> Void in
-                //print("error\(error)")
                 ++i
-                if let digits = contact.phoneNumbers.first?.value as? CNPhoneNumber {
-                    print("\(contact.givenName) \(contact.familyName)'s phone number is \(digits.stringValue)")
-                }
-                
+                CoreData.sharedInstance.addContact(contact)
             })
+            
         } catch {
             print("error")
         }
         
         print("contacts count \(i)")
-        
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        print("contacts count \(CoreData.sharedInstance.fetchAllContacts().count)")
     }
     
     func uploadContacts() {
