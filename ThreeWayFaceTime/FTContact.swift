@@ -10,11 +10,11 @@ import Foundation
 
 class FTContact: NSObject {
     
-    let givenName:String
-    let familyName:String
+    let givenName:String?
+    let familyName:String?
     let phoneNumber:String
     
-    init(givenName:String,familyName:String,phoneNumber:String) {
+    init(givenName:String?,familyName:String?,phoneNumber:String) {
         self.givenName = givenName
         self.familyName = familyName
         self.phoneNumber = phoneNumber
