@@ -42,6 +42,7 @@ public class OpenTokHelper : NSObject {
     
     override public init() {
         super.init()
+        
         if let cachedSession = PFUser.currentUser()?["session"] as? String {
             session = OTSession(apiKey: key, sessionId: cachedSession, delegate: self)
             generateToken(cachedSession)
@@ -52,7 +53,6 @@ public class OpenTokHelper : NSObject {
     }
     
     private func createSession() {
-        print("createSession()")
         
         PFCloud.callFunctionInBackground("opentokNewSession", withParameters: nil) {
             (sessionID, error) -> Void in
@@ -72,8 +72,8 @@ public class OpenTokHelper : NSObject {
         PFCloud.callFunctionInBackground("opentokGenerateToken", withParameters: ["sessionId":"\(sessionId)"]) { (result, error) -> Void in
             if error != nil {
                 print("error \(error)")
-            } else if let id = result as? String {
-                self.connectSession(id)
+            } else if let token = result as? String {
+                self.connectSession(token)
                 self.updateUserSession(sessionId)
             }
         }
@@ -90,7 +90,6 @@ public class OpenTokHelper : NSObject {
     
     private func connectSession(token:String) {
         
-        print("connectSession")
         var error:OTError? = nil
         
         session.connectWithToken(token, error: &error)
@@ -102,7 +101,6 @@ public class OpenTokHelper : NSObject {
     }
     
     private func doPublish(session:OTSession) {
-        print("doPublish")
         
         let publisher = OTPublisher(delegate: self, name: UIDevice.currentDevice().name)
         
@@ -116,11 +114,10 @@ public class OpenTokHelper : NSObject {
         
         delegate?.displayPublisherView(publisher)
         
-        
     }
     
     private func doSubscribe(session:OTSession, stream:OTStream) {
-        print("doSubscribe")
+
         globalSubscriber = OTSubscriber(stream: stream, delegate: self)
         
         var error:OTError? = nil
@@ -143,8 +140,8 @@ extension OpenTokHelper: OTSessionDelegate {
     }
     
     public func session(session: OTSession!, streamCreated stream: OTStream!) {
-        doSubscribe(session, stream: stream)
         print("streamCreated")
+        doSubscribe(session, stream: stream)
     }
     
     public func sessionDidDisconnect(session: OTSession!) {
@@ -180,6 +177,8 @@ extension OpenTokHelper: OTPublisherDelegate {
     
     public func publisher(publisher: OTPublisherKit!, streamCreated stream: OTStream!) {
         doSubscribe(publisher.session, stream: stream)
+        
+        ParseHelper.sharedInstance.createCall(session)
         
     }
     
