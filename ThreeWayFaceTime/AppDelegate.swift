@@ -26,6 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFUser.enableAutomaticUser()
         
         Fabric.with([Crashlytics.self,Digits.self])
+        
+        if PFUser.currentUser() == nil {
+            window?.rootViewController = LoginViewController.instantiateFromStoryboard()
+            window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 

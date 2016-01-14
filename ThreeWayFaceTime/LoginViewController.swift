@@ -12,12 +12,15 @@ import Parse
 import Contacts
 
 class LoginViewController: UIViewController {
+    
+    class func instantiateFromStoryboard() -> LoginViewController {
+        return UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController() as! LoginViewController
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addDigitsButton()
-        
     }
     
     func addDigitsButton() {
@@ -49,16 +52,25 @@ class LoginViewController: UIViewController {
                 print("signupError \(error)")
                 
                 if error!.code == 202 {
-                    PFUser.logInWithUsernameInBackground(digitsSession.phoneNumber, password: digitsSession.userID, block: { (user, error) -> Void in
-                        //self.uploadContacts()
-                        self.searchContacts()
+                    PFUser.logInWithUsernameInBackground(digitsSession.phoneNumber, password: digitsSession.userID, block: {
+                        (user, error) -> Void in
+                        if error != nil {
+                            UIAlertController().displayMessage(error!.localizedDescription)
+                        } else {
+                            self.dismiss()
+                        }
                     })
                 }
-                //self.uploadContacts()
             } else {
-                print("sexcess")
+                self.dismiss()
             }
         }
+        
+    }
+    
+    func dismiss() {
+        
+        dismissViewControllerAnimated(true, completion: nil)
         
     }
     
@@ -80,38 +92,29 @@ class LoginViewController: UIViewController {
         
         print("contacts count \(i)")
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        print("contacts count \(CoreData.sharedInstance.fetchAllContacts().count)")
-    }
+
     
     func uploadContacts() {
         let userSession = Digits.sharedInstance().session()
-        print(userSession)
         let contacts = DGTContacts(userSession: userSession)
         
         contacts.startContactsUploadWithCompletion {
             result, error in
             // Inspect results and error objects to determine if upload succeeded.
-            print("error\(error)")
-            print("result contacts\(result.totalContacts)")
-            print("result contacts successful\(result.numberOfUploadedContacts)")
             
         }
     }
     
     func searchContacts() {
-        // Swift
         let userSession = Digits.sharedInstance().session()
         let contacts = DGTContacts(userSession: userSession)
         
-        /*
         contacts.lookupContactMatchesWithCursor(nil) { matches, nextCursor, error in
             // matches is an Array of DGTUser objects.
             // Use nextCursor in a follow-up call to this method to offset the results.
             print(matches)
             print(error)
-        }*/
+        }
     }
 
 }
