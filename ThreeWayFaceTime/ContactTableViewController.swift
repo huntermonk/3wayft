@@ -31,6 +31,11 @@ class ContactTableViewController: UITableViewController {
             CoreData.sharedInstance.saveAllContacts()
         }
         contacts = CoreData.sharedInstance.fetchFTContacts()
+        
+        if contacts.count == 0 {
+            contacts = [FTContact(givenName: "King", familyName: "Kong", phoneNumber: "817-817-8170")]
+        }
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
