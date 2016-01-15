@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65044DCA1C40D7B5008B8F14 /* secondStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044DC91C40D7B5008B8F14 /* secondStream.swift */; };
 		6516C1841C47031D003B35E0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6516C1831C47031D003B35E0 /* AddressBook.framework */; };
 		6516C1861C470323003B35E0 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6516C1851C470323003B35E0 /* AddressBookUI.framework */; };
 		6516C1881C472F9F003B35E0 /* FT+NSUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6516C1871C472F9F003B35E0 /* FT+NSUserDefaults.swift */; };
@@ -21,6 +20,8 @@
 		65260A5D1C482EB300656FFB /* PFUser+Digits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A5C1C482EB300656FFB /* PFUser+Digits.swift */; };
 		65260A621C483A0300656FFB /* Call.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65260A611C483A0300656FFB /* Call.storyboard */; };
 		65260A641C483A1C00656FFB /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A631C483A1C00656FFB /* CallViewController.swift */; };
+		65260A671C483C9D00656FFB /* DigitsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A661C483C9D00656FFB /* DigitsHelper.swift */; };
+		65260A691C483FC000656FFB /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A681C483FC000656FFB /* ParseHelper.swift */; };
 		65961AB81C448F3000BD9212 /* OpenTokHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65961AB71C448F3000BD9212 /* OpenTokHelper.swift */; };
 		65961ABA1C448FEC00BD9212 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65961AB91C448FEC00BD9212 /* LoginViewController.swift */; };
 		65A838E91BFA9DED005A876B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A838E81BFA9DED005A876B /* CoreMedia.framework */; };
@@ -75,7 +76,6 @@
 
 /* Begin PBXFileReference section */
 		2E98B168BF0F3B4C53A5B050 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		65044DC91C40D7B5008B8F14 /* secondStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondStream.swift; sourceTree = "<group>"; };
 		6516C1831C47031D003B35E0 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		6516C1851C470323003B35E0 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		6516C1871C472F9F003B35E0 /* FT+NSUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FT+NSUserDefaults.swift"; sourceTree = "<group>"; };
@@ -89,6 +89,8 @@
 		65260A5C1C482EB300656FFB /* PFUser+Digits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PFUser+Digits.swift"; sourceTree = "<group>"; };
 		65260A611C483A0300656FFB /* Call.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Call.storyboard; sourceTree = "<group>"; };
 		65260A631C483A1C00656FFB /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
+		65260A661C483C9D00656FFB /* DigitsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitsHelper.swift; sourceTree = "<group>"; };
+		65260A681C483FC000656FFB /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		65961AB71C448F3000BD9212 /* OpenTokHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTokHelper.swift; sourceTree = "<group>"; };
 		65961AB91C448FEC00BD9212 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		65A838E81BFA9DED005A876B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -245,6 +247,8 @@
 			children = (
 				6516C18C1C473222003B35E0 /* CoreData.swift */,
 				65961AB71C448F3000BD9212 /* OpenTokHelper.swift */,
+				65260A681C483FC000656FFB /* ParseHelper.swift */,
+				65260A661C483C9D00656FFB /* DigitsHelper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -292,7 +296,6 @@
 				65260A651C483A6B00656FFB /* Caller */,
 				65C45C891BFA9B5D0019E91A /* Main.storyboard */,
 				6516C1941C476314003B35E0 /* Contacts */,
-				65044DC91C40D7B5008B8F14 /* secondStream.swift */,
 				65044DC71C40D082008B8F14 /* Supporting Files */,
 			);
 			path = ThreeWayFaceTime;
@@ -420,6 +423,7 @@
 				TargetAttributes = {
 					65C45C811BFA9B5D0019E91A = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = D8N257P9J2;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -556,8 +560,8 @@
 				65961ABA1C448FEC00BD9212 /* LoginViewController.swift in Sources */,
 				65260A5D1C482EB300656FFB /* PFUser+Digits.swift in Sources */,
 				65C45C8E1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld in Sources */,
-				65044DCA1C40D7B5008B8F14 /* secondStream.swift in Sources */,
 				65260A1D1C477F4B00656FFB /* ContactDetailTableViewController.swift in Sources */,
+				65260A671C483C9D00656FFB /* DigitsHelper.swift in Sources */,
 				65260A641C483A1C00656FFB /* CallViewController.swift in Sources */,
 				6516C18D1C473222003B35E0 /* CoreData.swift in Sources */,
 				6516C18A1C472FB9003B35E0 /* FT+UIAlertController.swift in Sources */,
@@ -566,6 +570,7 @@
 				6516C1911C476305003B35E0 /* ContactTableViewController.swift in Sources */,
 				65C45C861BFA9B5D0019E91A /* AppDelegate.swift in Sources */,
 				6516C1881C472F9F003B35E0 /* FT+NSUserDefaults.swift in Sources */,
+				65260A691C483FC000656FFB /* ParseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,11 +714,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ThreeWayFaceTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.ThreeWayFaceTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ThreeWayFaceTime/ThreeWayFaceTime-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -725,11 +733,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ThreeWayFaceTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.ThreeWayFaceTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ThreeWayFaceTime/ThreeWayFaceTime-Bridging-Header.h";
 			};
 			name = Release;
