@@ -189,10 +189,7 @@ extension OpenTokHelper: OTSubscriberKitDelegate {
 extension OpenTokHelper: OTPublisherDelegate {
     
     public func publisher(publisher: OTPublisherKit!, streamCreated stream: OTStream!) {
-        //doSubscribe(publisher.session, stream: stream)
         print("publisher streamCreated")
-        //ParseHelper.sharedInstance.createCall(session)
-        
     }
     
     public func publisher(publisher: OTPublisherKit!, didFailWithError error: OTError!) {
