@@ -22,6 +22,7 @@
 		65260A641C483A1C00656FFB /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A631C483A1C00656FFB /* CallViewController.swift */; };
 		65260A671C483C9D00656FFB /* DigitsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A661C483C9D00656FFB /* DigitsHelper.swift */; };
 		65260A691C483FC000656FFB /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A681C483FC000656FFB /* ParseHelper.swift */; };
+		65260A6B1C49C62600656FFB /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A6A1C49C62600656FFB /* GCD.swift */; };
 		65961AB81C448F3000BD9212 /* OpenTokHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65961AB71C448F3000BD9212 /* OpenTokHelper.swift */; };
 		65961ABA1C448FEC00BD9212 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65961AB91C448FEC00BD9212 /* LoginViewController.swift */; };
 		65A838E91BFA9DED005A876B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A838E81BFA9DED005A876B /* CoreMedia.framework */; };
@@ -91,6 +92,7 @@
 		65260A631C483A1C00656FFB /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		65260A661C483C9D00656FFB /* DigitsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitsHelper.swift; sourceTree = "<group>"; };
 		65260A681C483FC000656FFB /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
+		65260A6A1C49C62600656FFB /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		65961AB71C448F3000BD9212 /* OpenTokHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTokHelper.swift; sourceTree = "<group>"; };
 		65961AB91C448FEC00BD9212 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		65A838E81BFA9DED005A876B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -211,6 +213,7 @@
 				65260A5C1C482EB300656FFB /* PFUser+Digits.swift */,
 				6516C1871C472F9F003B35E0 /* FT+NSUserDefaults.swift */,
 				6516C1891C472FB9003B35E0 /* FT+UIAlertController.swift */,
+				65260A6A1C49C62600656FFB /* GCD.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65260A6B1C49C62600656FFB /* GCD.swift in Sources */,
 				65961ABA1C448FEC00BD9212 /* LoginViewController.swift in Sources */,
 				65260A5D1C482EB300656FFB /* PFUser+Digits.swift in Sources */,
 				65C45C8E1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld in Sources */,
