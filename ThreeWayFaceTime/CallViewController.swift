@@ -16,10 +16,6 @@ class CallViewController: UIViewController {
     let screenSize = UIScreen.mainScreen().bounds
     var calling: UserPhoneNumber?
     
-    class func instantiateFromStoryboard() -> CallViewController {
-        return UIStoryboard(name: "Call", bundle: nil).instantiateInitialViewController() as! CallViewController
-    }
-    
     // this is a convenient way to create this view controller without a calling
     convenience init() {
         self.init(calling: nil)
