@@ -23,8 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.setApplicationId("GP316TZUfjbbXH4MQhjWXRu58PTaKJDzpyLQ8dao", clientKey: "oxtm6OvMrpZ5W788UZObVJIsEvsAAmVdv0lDOvN4")
         
-        PFUser.enableAutomaticUser()
-        
         Fabric.with([Crashlytics.self,Digits.self])
         
         if PFUser.currentUser() == nil {
