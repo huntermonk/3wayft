@@ -61,6 +61,52 @@
             </objects>
             <point key="canvasLocation" x="-303" y="-1644"/>
         </scene>
+        <!--Recents Table View Controller-->
+        <scene sceneID="8KO-Yy-8kU">
+            <objects>
+                <tableViewController id="JRD-7R-UXO" customClass="RecentsTableViewController" customModule="ThreeWayFaceTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9vA-1S-pRK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="GBm-Aa-E3B">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GBm-Aa-E3B" id="023-6o-ngf">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JRD-7R-UXO" id="vrQ-Zi-WUd"/>
+                            <outlet property="delegate" destination="JRD-7R-UXO" id="yKu-Yf-oWA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="F5S-wk-pMC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWW-dC-u7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535" y="-955"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cEu-Uw-T9i">
+            <objects>
+                <navigationController id="TxA-Ur-WkY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="3Zr-Uy-1Z7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yUB-9e-tAz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JRD-7R-UXO" kind="relationship" relationship="rootViewController" id="kS3-eW-3ry"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBC-pw-OXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-285" y="-955"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dXK-3H-Ofa">
             <objects>
@@ -71,6 +117,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="TxA-Ur-WkY" kind="relationship" relationship="viewControllers" id="HNs-1L-HFF"/>
                         <segue destination="9Zf-ox-K2d" kind="relationship" relationship="viewControllers" id="xMA-OO-mPD"/>
                     </connections>
                 </tabBarController>
