@@ -18,7 +18,7 @@ class ContactTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        contacts = CoreData.sharedInstance.fetchAllContacts()
+        contacts = CoreData.sharedInstance.fetchFTContacts()
     }
     
     // MARK: - Table view data source
