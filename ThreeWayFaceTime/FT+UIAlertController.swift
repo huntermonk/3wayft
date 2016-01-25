@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Parse
 
 extension UIAlertController {
     
@@ -19,6 +20,26 @@ extension UIAlertController {
         let window = UIApplication.sharedApplication().windows[0]
         
         window.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
+    func displayError(error:NSError?) {
+        
+        if error != nil && error!.domain == PFParseErrorDomain && error!.code == 120 {
+            return
+        }
+        
+        if let message = error?.localizedDescription {
+            print(error?.debugDescription)
+            
+            let alertController = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
+            let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alertController.addAction(action)
+            
+            let window = UIApplication.sharedApplication().windows[0]
+            
+            window.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
+        }
         
     }
     
