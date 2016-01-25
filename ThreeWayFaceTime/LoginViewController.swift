@@ -26,10 +26,8 @@ class LoginViewController: UIViewController {
         
         let digitsButton = DGTAuthenticateButton(authenticationCompletion: {
             (session, error) in
-            // Inspect session/error objects
             if error != nil {
-                print("error \(error)")
-                UIAlertController().displayMessage(error!.localizedDescription)
+                UIAlertController().displayError(error)
             } else {
                 self.loginParse()
             }
@@ -45,7 +43,7 @@ class LoginViewController: UIViewController {
         
         PFUser.loginWithDigitsInBackground({ (user, error) -> Void in
             if error != nil {
-                UIAlertController().displayMessage(error!.localizedDescription)
+                UIAlertController().displayError(error)
             } else {
                 self.uploadContacts()
             }
@@ -71,11 +69,10 @@ class LoginViewController: UIViewController {
         
         contacts.startContactsUploadWithCompletion {
             result, error in
-            
             if error != nil {
-                print("error \(error)")
+                print("error \(error.debugDescription)")
                 if error.code != 8 {
-                    UIAlertController().displayMessage(error!.localizedDescription)
+                    UIAlertController().displayError(error)
                 } else {
                     self.dismiss()
                 }
@@ -85,16 +82,5 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func searchContacts() {
-        let userSession = Digits.sharedInstance().session()
-        let contacts = DGTContacts(userSession: userSession)
-        
-        contacts.lookupContactMatchesWithCursor(nil) { matches, nextCursor, error in
-            // matches is an Array of DGTUser objects.
-            // Use nextCursor in a follow-up call to this method to offset the results.
-            print(matches)
-            print(error)
-        }
-    }
 
 }
