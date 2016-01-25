@@ -21,6 +21,11 @@ class RecentsHelper: NSObject {
     
     var recents = [PFObject]()
     
+    convenience init(delegate:RecentsHelperDelegate) {
+        self.init()
+        self.delegate = delegate
+    }
+    
     override init() {
         super.init()
         retrieveRecents()

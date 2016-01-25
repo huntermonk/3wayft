@@ -40,6 +40,11 @@ public class OpenTokHelper : NSObject {
     
     static let sharedInstance = OpenTokHelper()
     
+    convenience init(delegate:OpenTokHelperDelegate) {
+        self.init()
+        self.delegate = delegate
+    }
+    
     override public init() {
         super.init()
         
