@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6507AF6D1C56D0C500DA9B98 /* FT+NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6507AF6C1C56D0C500DA9B98 /* FT+NSDate.swift */; };
 		6516C1841C47031D003B35E0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6516C1831C47031D003B35E0 /* AddressBook.framework */; };
 		6516C1861C470323003B35E0 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6516C1851C470323003B35E0 /* AddressBookUI.framework */; };
 		6516C1881C472F9F003B35E0 /* FT+NSUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6516C1871C472F9F003B35E0 /* FT+NSUserDefaults.swift */; };
@@ -23,9 +24,10 @@
 		65260A691C483FC000656FFB /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A681C483FC000656FFB /* ParseHelper.swift */; };
 		65260A6B1C49C62600656FFB /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A6A1C49C62600656FFB /* GCD.swift */; };
 		65260A6D1C49C6C200656FFB /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A6C1C49C6C200656FFB /* Call.swift */; };
-		65260A6F1C49C7F900656FFB /* Recents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65260A6E1C49C7F900656FFB /* Recents.storyboard */; };
 		65260A711C49C82100656FFB /* RecentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A701C49C82100656FFB /* RecentsTableViewController.swift */; };
 		65260A741C49C92E00656FFB /* RecentsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65260A731C49C92E00656FFB /* RecentsHelper.swift */; };
+		6583D4841C55AFD800A90140 /* initiateCall.png in Resources */ = {isa = PBXBuildFile; fileRef = 6583D4831C55AFD800A90140 /* initiateCall.png */; };
+		6583D4861C55B84E00A90140 /* RecentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6583D4851C55B84E00A90140 /* RecentsTableViewCell.swift */; };
 		65961AB81C448F3000BD9212 /* OpenTokHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65961AB71C448F3000BD9212 /* OpenTokHelper.swift */; };
 		65961ABA1C448FEC00BD9212 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65961AB91C448FEC00BD9212 /* LoginViewController.swift */; };
 		65A838E91BFA9DED005A876B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A838E81BFA9DED005A876B /* CoreMedia.framework */; };
@@ -80,6 +82,7 @@
 
 /* Begin PBXFileReference section */
 		2E98B168BF0F3B4C53A5B050 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6507AF6C1C56D0C500DA9B98 /* FT+NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FT+NSDate.swift"; sourceTree = "<group>"; };
 		6516C1831C47031D003B35E0 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		6516C1851C470323003B35E0 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		6516C1871C472F9F003B35E0 /* FT+NSUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FT+NSUserDefaults.swift"; sourceTree = "<group>"; };
@@ -96,9 +99,10 @@
 		65260A681C483FC000656FFB /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		65260A6A1C49C62600656FFB /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		65260A6C1C49C6C200656FFB /* Call.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
-		65260A6E1C49C7F900656FFB /* Recents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recents.storyboard; sourceTree = "<group>"; };
 		65260A701C49C82100656FFB /* RecentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsTableViewController.swift; sourceTree = "<group>"; };
 		65260A731C49C92E00656FFB /* RecentsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsHelper.swift; sourceTree = "<group>"; };
+		6583D4831C55AFD800A90140 /* initiateCall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = initiateCall.png; sourceTree = "<group>"; };
+		6583D4851C55B84E00A90140 /* RecentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsTableViewCell.swift; sourceTree = "<group>"; };
 		65961AB71C448F3000BD9212 /* OpenTokHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTokHelper.swift; sourceTree = "<group>"; };
 		65961AB91C448FEC00BD9212 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		65A838E81BFA9DED005A876B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -205,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				65C45C8F1BFA9B5E0019E91A /* Assets.xcassets */,
+				6583D4831C55AFD800A90140 /* initiateCall.png */,
 				65C45C911BFA9B5E0019E91A /* LaunchScreen.storyboard */,
 				65C45C941BFA9B5E0019E91A /* Info.plist */,
 				65C45C8C1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld */,
@@ -220,6 +225,7 @@
 				6516C1871C472F9F003B35E0 /* FT+NSUserDefaults.swift */,
 				6516C1891C472FB9003B35E0 /* FT+UIAlertController.swift */,
 				65260A6A1C49C62600656FFB /* GCD.swift */,
+				6507AF6C1C56D0C500DA9B98 /* FT+NSDate.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -275,8 +281,8 @@
 		65260A721C49C91800656FFB /* Recents */ = {
 			isa = PBXGroup;
 			children = (
-				65260A6E1C49C7F900656FFB /* Recents.storyboard */,
 				65260A701C49C82100656FFB /* RecentsTableViewController.swift */,
+				6583D4851C55B84E00A90140 /* RecentsTableViewCell.swift */,
 			);
 			name = Recents;
 			sourceTree = "<group>";
@@ -489,9 +495,9 @@
 				65260A171C477AC100656FFB /* ContactDetail.storyboard in Resources */,
 				65260A1A1C477BC300656FFB /* Login.storyboard in Resources */,
 				65C45C931BFA9B5E0019E91A /* LaunchScreen.storyboard in Resources */,
-				65260A6F1C49C7F900656FFB /* Recents.storyboard in Resources */,
 				65C45C901BFA9B5E0019E91A /* Assets.xcassets in Resources */,
 				65C45C8B1BFA9B5D0019E91A /* Main.storyboard in Resources */,
+				6583D4841C55AFD800A90140 /* initiateCall.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,9 +589,11 @@
 				65260A711C49C82100656FFB /* RecentsTableViewController.swift in Sources */,
 				65260A5D1C482EB300656FFB /* PFUser+Digits.swift in Sources */,
 				65C45C8E1BFA9B5E0019E91A /* ThreeWayFaceTime.xcdatamodeld in Sources */,
+				6507AF6D1C56D0C500DA9B98 /* FT+NSDate.swift in Sources */,
 				65260A1D1C477F4B00656FFB /* ContactDetailTableViewController.swift in Sources */,
 				65260A671C483C9D00656FFB /* DigitsHelper.swift in Sources */,
 				65260A641C483A1C00656FFB /* CallViewController.swift in Sources */,
+				6583D4861C55B84E00A90140 /* RecentsTableViewCell.swift in Sources */,
 				6516C18D1C473222003B35E0 /* CoreData.swift in Sources */,
 				65260A741C49C92E00656FFB /* RecentsHelper.swift in Sources */,
 				6516C18A1C472FB9003B35E0 /* FT+UIAlertController.swift in Sources */,
@@ -740,6 +748,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = ThreeWayFaceTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.ThreeWayFaceTime;
