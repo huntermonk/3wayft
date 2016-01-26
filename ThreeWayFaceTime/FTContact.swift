@@ -13,11 +13,13 @@ class FTContact: NSObject {
     let givenName:String?
     let familyName:String?
     let phoneNumber:String
+    let digitsID:String?
     
-    init(givenName:String?,familyName:String?,phoneNumber:String) {
+    init(givenName:String?,familyName:String?,phoneNumber:String,digitsID:String? = nil) {
         self.givenName = givenName
         self.familyName = familyName
         self.phoneNumber = phoneNumber
+        self.digitsID = digitsID
         super.init()
     }
     
