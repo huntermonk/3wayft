@@ -13,6 +13,8 @@ public typealias UserPhoneNumber = String
 
 class CallViewController: UIViewController {
     
+
+    let test = "this is a test variable 👅"
     let screenSize = UIScreen.mainScreen().bounds
     var calling: UserPhoneNumber?
     
